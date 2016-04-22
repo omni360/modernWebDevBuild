@@ -185,6 +185,41 @@ import gulp from "gulp";
 import modernWebDevBuild from "modern-web-dev-build";
 let options = undefined; // no options are supported yet
 
+
+options.ignore = {
+    scripts: {
+        javascript: ["/node_modules/**/*" + extensions.javascript,
+                    "/jspm_packages/**/*" + extensions.javascript],
+        typescript: ["node_modules/**/*" + extensions.typescript,
+                    "jspm_packages/**/*" + extensions.typescript]
+    },
+    styles: {
+        css: ["/node_modules/**/*" + extensions.css,
+            "/jspm_packages/**/*" + extensions.css],
+        sass: ["node_modules/**/*" + extensions.sass,
+            "jspm_packages/**/*" + extensions.sass]
+    },
+    images: {
+        png: ["/node_modules/**/*" + extensions.png,
+            "/jspm_packages/**/*" + extensions.png],
+        jpg: ["node_modules/**/*" + extensions.jpg,
+            "jspm_packages/**/*" + extensions.jpg],
+        jpeg: ["node_modules/**/*" + extensions.jpeg,
+            "jspm_packages/**/*" + extensions.jpeg],
+        svg: ["node_modules/**/*" + extensions.svg,
+            "jspm_packages/**/*" + extensions.svg],
+        gif: ["node_modules/**/*" + extensions.gif,
+            "jspm_packages/**/*" + extensions.gif]
+        },
+    html: {
+        html: ["/node_modules/**/*" + extensions.html,
+            "/jspm_packages/**/*" + extensions.html]
+    },
+    sourcemaps: {
+        css: ["/node_modules/**/*" + extensions.sourcemap,
+            "/jspm_packages/**/*" + extensions.sourcemap]
+    } 
+};
 //options.minifyHTML = false;
 //...
 
@@ -771,6 +806,7 @@ Check out [gulp-inline-source](https://www.npmjs.com/package/gulp-inline-source)
 * gulp-concat: concatenate files: https://www.npmjs.com/package/gulp-concat
 * gulp-rename: rename files: https://www.npmjs.com/package/gulp-rename
 * gulp-debug: useful to verify the stream contents: https://www.npmjs.com/package/gulp-debug
+* gulp-ignore: include or exclude gulp files from the stream based on a condition: https://www.npmjs.com/package/gulp-ignore
 * gulp-cssimport: replace CSS imports by stylesheet contents: https://www.npmjs.com/package/gulp-cssimport
 * gulp-nice-package: validate npm's package.json file: https://www.npmjs.com/package/gulp-nice-package/
 * gulp-inject: JavaScript, stylesheet and webcomponent injection: https://www.npmjs.com/package/gulp-inject

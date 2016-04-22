@@ -46,6 +46,41 @@ let globs = {
     sourcemaps: "/**/*" + extensions.sourcemap
 };
 
+let ignore = {
+    scripts: {
+        javascript: ["/node_modules/**/*" + extensions.javascript,
+                    "/jspm_packages/**/*" + extensions.javascript],
+        typescript: ["node_modules/**/*" + extensions.typescript,
+                    "jspm_packages/**/*" + extensions.typescript]
+    },
+    styles: {
+        css: ["/node_modules/**/*" + extensions.css,
+            "/jspm_packages/**/*" + extensions.css],
+        sass: ["node_modules/**/*" + extensions.sass,
+            "jspm_packages/**/*" + extensions.sass]
+    },
+    images: {
+        png: ["/node_modules/**/*" + extensions.png,
+            "/jspm_packages/**/*" + extensions.png],
+        jpg: ["node_modules/**/*" + extensions.jpg,
+            "jspm_packages/**/*" + extensions.jpg],
+        jpeg: ["node_modules/**/*" + extensions.jpeg,
+            "jspm_packages/**/*" + extensions.jpeg],
+        svg: ["node_modules/**/*" + extensions.svg,
+            "jspm_packages/**/*" + extensions.svg],
+        gif: ["node_modules/**/*" + extensions.gif,
+            "jspm_packages/**/*" + extensions.gif]
+        },
+    html: {
+        html: ["/node_modules/**/*" + extensions.html,
+            "/jspm_packages/**/*" + extensions.html]
+    },
+    sourcemaps: {
+        css: ["/node_modules/**/*" + extensions.sourcemap,
+            "/jspm_packages/**/*" + extensions.sourcemap]
+    } 
+};
+
 let files = {
     any: "*",
     packageJSON: path.join(folders.root, "/package.json"),
@@ -165,6 +200,7 @@ export default {
     extensions,
     folders,
     globs,
+    ignore,
     files,
     javascript,
     typescript,
