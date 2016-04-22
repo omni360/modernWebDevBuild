@@ -188,36 +188,36 @@ let options = undefined; // no options are supported yet
 
 options.ignore = {
     scripts: {
-        javascript: ["/node_modules/**/*" + extensions.javascript,
-                    "/jspm_packages/**/*" + extensions.javascript],
-        typescript: ["node_modules/**/*" + extensions.typescript,
-                    "jspm_packages/**/*" + extensions.typescript]
+        javascript: ["/node_modules/**/*" + "*.js",
+                    "/jspm_packages/**/*" + "*.js"],
+        typescript: ["node_modules/**/*" + "*.ts",
+                    "jspm_packages/**/*" + "*.ts"]
     },
     styles: {
-        css: ["/node_modules/**/*" + extensions.css,
-            "/jspm_packages/**/*" + extensions.css],
-        sass: ["node_modules/**/*" + extensions.sass,
-            "jspm_packages/**/*" + extensions.sass]
+        css: ["/node_modules/**/*" + "*.css",
+            "/jspm_packages/**/*" + "*.css"],
+        sass: ["node_modules/**/*" + "*.sass",
+            "jspm_packages/**/*" + "*.sass"]
     },
     images: {
-        png: ["/node_modules/**/*" + extensions.png,
-            "/jspm_packages/**/*" + extensions.png],
-        jpg: ["node_modules/**/*" + extensions.jpg,
-            "jspm_packages/**/*" + extensions.jpg],
-        jpeg: ["node_modules/**/*" + extensions.jpeg,
-            "jspm_packages/**/*" + extensions.jpeg],
-        svg: ["node_modules/**/*" + extensions.svg,
-            "jspm_packages/**/*" + extensions.svg],
-        gif: ["node_modules/**/*" + extensions.gif,
-            "jspm_packages/**/*" + extensions.gif]
+        png: ["/node_modules/**/*" + "*.png",
+            "/jspm_packages/**/*" + "*.png"],
+        jpg: ["node_modules/**/*" + "*.jpg",
+            "jspm_packages/**/*" + "*.jpg"],
+        jpeg: ["node_modules/**/*" + "*.jpeg",
+            "jspm_packages/**/*" + "*.jpeg"],
+        svg: ["node_modules/**/*" + "*.svg",
+            "jspm_packages/**/*" + "*.svg"],
+        gif: ["node_modules/**/*" + "*.gif",
+            "jspm_packages/**/*" + "*.gif"]
         },
     html: {
-        html: ["/node_modules/**/*" + extensions.html,
-            "/jspm_packages/**/*" + extensions.html]
+        html: ["/node_modules/**/*" + "*.html",
+            "/jspm_packages/**/*" + "*.html"]
     },
     sourcemaps: {
-        css: ["/node_modules/**/*" + extensions.sourcemap,
-            "/jspm_packages/**/*" + extensions.sourcemap]
+        css: ["/node_modules/**/*" + "*.sourcemap",
+            "/jspm_packages/**/*" + "*.sourcemap"]
     } 
 };
 //options.minifyHTML = false;
