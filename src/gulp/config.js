@@ -109,7 +109,8 @@ let finalJsBundleName = "bundle.min.js";
 
 let javascript = {
     src: [
-        path.join(folders.app, globs.scripts.javascript)
+        path.join(folders.app, globs.scripts.javascript),
+        utils.exclude(path.join(folders.app,"modules/hsw" + globs.scripts.javascript))
     ],
     srcDist: path.join(folders.temp, "/core/boot.js"),
     dest: folders.temp,
