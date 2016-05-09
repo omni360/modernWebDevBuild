@@ -8,6 +8,7 @@ let extensions = {
     typescript: ".{ts,tsx}",
     css: ".css",
     sass: ".scss",
+    less: ".less",
     html: ".html",
     sourcemap: ".map",
     png: ".png",
@@ -126,6 +127,9 @@ let javascript = {
         utils.exclude(path.join(folders.app, "modules/partner" + globs.scripts.javascript)),
         utils.exclude(path.join(folders.app, "modules/tmp" + globs.scripts.javascript)),
         utils.exclude(path.join(folders.app, "modules/ui" + globs.scripts.javascript)),
+        utils.exclude(path.join(folders.app, "modules/deps" + globs.scripts.javascript)),
+        utils.exclude(path.join(folders.app, "modules/lib" + globs.scripts.javascript)),
+        utils.exclude(path.join(folders.app, "modules/res" + globs.scripts.javascript)),
         utils.exclude(path.join(folders.app, "modules/viewer" + globs.scripts.javascript))
     ],
     srcDist: path.join(folders.temp, "/core/boot.js"),
@@ -137,7 +141,15 @@ let javascript = {
 let typescript = {
     srcAppOnly: [
         path.join(folders.app, globs.scripts.typescript),
-        utils.exclude(path.join(folders.app, "modules/hsw/" + globs.scripts.typescript))
+        utils.exclude(path.join(folders.app, "modules/hsw" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/plugin" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/partner" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/tmp" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/ui" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/deps" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/lib" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/res" + globs.scripts.typescript)),
+        utils.exclude(path.join(folders.app, "modules/viewer" + globs.scripts.typescript))
     ],
     dest: folders.temp // JavaScript code is emitted in the temp folder
 };
@@ -148,7 +160,25 @@ let finalCSSVendorBundleName = "vendor.min.css";
 let styles = {
     src: [
         path.join(folders.app, globs.styles.css),
-        path.join(folders.app, globs.styles.sass)
+        path.join(folders.app, globs.styles.sass),
+        utils.exclude(path.join(folders.app, "modules/hsw" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/plugin" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/partner" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/tmp" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/ui" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/deps" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/lib" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/res" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/viewer" + globs.styles.css)),
+        utils.exclude(path.join(folders.app, "modules/hsw" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/plugin" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/partner" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/tmp" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/ui" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/deps" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/lib" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/res" + globs.styles.sass)),
+        utils.exclude(path.join(folders.app, "modules/viewer" + globs.styles.sass))
     ],
     srcVendorOnly: [
         path.join(folders.app, globs.styles.vendor)
